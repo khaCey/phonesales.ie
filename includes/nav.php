@@ -13,17 +13,12 @@
                         <?php
                             if ($activePage=="apparel")echo active;
                         ?>" aria-current="page" href="//phonesales.ie/apparel">Apparel</a></li>
-                        
-                        
-                        
+                              
                         <li class="nav-item"><a class="nav-link
                         <?php
                             if ($activePage=="bags")echo active;
                         ?>"href="//phonesales.ie/bags">Bags</a></li>
-                        
-                        
-                        
-                        
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle 
                             <?php
@@ -36,17 +31,13 @@
                                 <li><a class="dropdown-item" href="//phonesales.ie/electronics/Android">Android</a></li>
                             </ul>
                         </li>
-                        
-                        
-                        
+ 
                         <li class="nav-item" 
                         ><a class="nav-link 
                         <?php
                             if ($activePage=="raffle")echo active;
                         ?>" aria-current="page" href="//phonesales.ie/raffles">Raffles</a></li>
-                        
-                        
-                        
+  
                     </ul>
                     <form class="d-flex">
                         <button class="btn btn-outline-dark" type="submit">
