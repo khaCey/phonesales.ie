@@ -1,0 +1,28 @@
+
+
+
+RewriteEngine on
+
+RewriteCond %{HTTPS} off 
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^electronics/([a-zA-Z]+) electronics.php?type=$1 [NC,L] 
+RewriteRule ^electronics.php?type=([a-zA-Z]+)$ electronics/$1 [NC,L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^shopitem/([a-zA-Z]+) shopitem.php?productID=$1 [NC,L] 
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^raffleitem/([a-zA-Z]+) raffleitem.php?raffleID=$1 [NC,L] 
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^(.*)$ $1.php [NC,L] 
