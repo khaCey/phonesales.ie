@@ -9,9 +9,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         
-                <li class="nav-item">
-                    <a class="nav-link <?php if ($activePage=="apparel"){echo "active";}?>" aria-current="page" href="//phonesales.ie/apparel">Apparel</a>
-                </li>     
+                <li class="nav-item"><a class="nav-link <?php if ($activePage=="apparel"){echo "active";}?>" aria-current="page" href="//phonesales.ie/apparel">Apparel</a></li>     
                 <li class="nav-item">
                     <a class="nav-link <?php if ($activePage=="bags"){echo "active";}?> " aria-current="page" href="//phonesales.ie/bags">Bags</a>
                 </li>
