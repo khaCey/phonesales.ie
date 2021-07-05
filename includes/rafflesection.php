@@ -17,6 +17,7 @@
                 $resultCheck = mysqli_num_rows($result);
                 if($resultCheck > 0){
                     while ($row = mysqli_fetch_assoc($result)){
+                        $available = $row["threshold"] - $row["current"];
                         echo "<div class=\"col mb-5\">";
                                 
                             echo "<div class=\"card h-100\">";
@@ -25,6 +26,7 @@
                                         echo "<div class=\"text-center\">";
                                             echo "<h5 class=\"fw-bolder\">{$row["prize"]} <br> {$row[""]}</h5>";
                                             echo "<h5>€{$row["price"]}</h5>";
+                                            echo "<p>Available Tickets: {$available}</p>";
                                             
                                         echo "</div>";
                                 echo "</div>";

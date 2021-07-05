@@ -19,3 +19,11 @@
     max-width: 1650px;
     margin: auto;
 }
+
+.home-divider{
+    border: 1px solid #dee1e6;
+}
+
+.header{
+    height: 12px;
+}
