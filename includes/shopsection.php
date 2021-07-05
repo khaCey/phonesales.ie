@@ -21,12 +21,11 @@
                                 
                             echo "<div class=\"card h-100\">";
                                 echo "<img class=\"card-img-top\" src=\"../images/{$row["imagename"]}.png\" alt=\"image not found\"  onerror=\"this.src='../images/450x600.png'\"/>";
-                                    echo "<div class=\"card-body p-4\">";
-                                        echo "<div class=\"text-center\">";
-                                            echo "<h5 class=\"fw-bolder\">{$row["brand"]} <br> {$row["product"]}</h5>";
-                                            echo "<h5>€{$row["sellprice"]}</h5>";
-                                            
-                                        echo "</div>";
+                                echo "<div class=\"card-body p-4\">";
+                                    echo "<div class=\"text-center\">";
+                                        echo "<h5 class=\"fw-bolder\">{$row["brand"]} <br> {$row["product"]}</h5>";
+                                        echo "<h5>€{$row["sellprice"]}</h5>";   
+                                    echo "</div>";
                                 echo "</div>";
                                 echo "<div class=\"card-footer p-4 pt-0 border-top-0 bg-transparent\">";
                                     echo "<div class=\"text-center\">";
