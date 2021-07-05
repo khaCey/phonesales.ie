@@ -2,7 +2,7 @@
     $type = mysqli_real_escape_string($conn, $_GET['type']);
 ?>
 
-<section class="py-5">
+<section class="py-5 section-container">
     <div class="container px-4 px-lg-5 mt-5">
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
             <!-- Item -->
@@ -17,6 +17,7 @@
                 $resultCheck = mysqli_num_rows($result);
                 if($resultCheck > 0){
                     while ($row = mysqli_fetch_assoc($result)){
+                        $available = $row["threshold"] - $row["current"];
                         echo "<div class=\"col mb-5\">";
                                 
                             echo "<div class=\"card h-100\">";
@@ -25,6 +26,7 @@
                                         echo "<div class=\"text-center\">";
                                             echo "<h5 class=\"fw-bolder\">{$row["prize"]} <br> {$row[""]}</h5>";
                                             echo "<h5>€{$row["price"]}</h5>";
+                                            echo "<p>Available Tickets: {$available}</p>";
                                             
                                         echo "</div>";
                                 echo "</div>";

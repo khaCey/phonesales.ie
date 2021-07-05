@@ -1,6 +1,4 @@
 
-
-
 RewriteEngine on
 
 RewriteCond %{HTTPS} off 
@@ -9,18 +7,20 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 
-RewriteRule ^electronics/([a-zA-Z]+) electronics.php?type=$1 [NC,L] 
-RewriteRule ^electronics.php?type=([a-zA-Z]+)$ electronics/$1 [NC,L,R=301]
+RewriteRule ^electronics/([0-9a-zA-Z]+) electronics.php?type=$1 [NC,L] 
+RewriteRule ^electronics.php?type=([0-9a-zA-Z]+) electronics/$1 [NC,L,R=301]
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 
-RewriteRule ^shopitem/([a-zA-Z]+) shopitem.php?productID=$1 [NC,L] 
+RewriteRule ^shopitem/([0-9a-zA-Z]+) shopitem.php?productID=$1 [NC,L] 
+RewriteRule ^shopitem.php?productID=([0-9a-zA-Z]+) shopitem/$1 [NC,L,R=301]
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 
-RewriteRule ^raffleitem/([a-zA-Z]+) raffleitem.php?raffleID=$1 [NC,L] 
+RewriteRule ^raffleitem/([0-9a-zA-Z]+) raffleitem.php?raffleID=$1 [NC,L] 
+RewriteRule ^raffleitem.php?raffleID=([0-9a-zA-Z]+) raffleitem/$1 [NC,L,R=301]
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
